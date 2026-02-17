@@ -26,6 +26,8 @@ function throwMissingEnvError(env: string): string {
 
 }
 
-const data = await getLastFmData(url);
+export const data = await getLastFmData(url);
+
 //testing
 console.log(JSON.stringify(data, null, 2));
+console.log(data.recenttracks);

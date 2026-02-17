@@ -1,6 +1,6 @@
 {
   "name": "spotify-widget",
-  "module": "src/index.ts",
+  "module": "src/api/index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
