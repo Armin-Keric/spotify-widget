@@ -8,15 +8,15 @@ import {getImage} from "./utils.ts"
 import {getSongName} from "./utils.ts"
 import {getNowPlaying} from "./utils.ts"
 
-export function generateSVG():string{
-    const song:string = getSongName();
-    const album:string = getAlbum();
-    const artist:string = getArtist();
-    const isPlaying:boolean = getNowPlaying();
-    const image:string = getImage();
+export function generateSVG(): string {
+    const song: string = getSongName();
+    const album: string = getAlbum();
+    const artist: string = getArtist();
+    const isPlaying: boolean = getNowPlaying();
+    const image: string = getImage();
 
 
-    //@ToDo
+
     //THIS IS A GENERATED SVG BY AI FOR TESTING
     return `
     <svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +26,7 @@ export function generateSVG():string{
         <rect x="20" y="20" width="80" height="80" rx="8" />
       </clipPath>
       <image 
-        href="${image}" 
+        href=${image}
         x="20" y="20" 
         width="80" height="80" 
         clip-path="url(#roundCorners)"

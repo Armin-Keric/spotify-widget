@@ -1,26 +1,29 @@
 import type {LastFMInterface} from "./LastFMInterface.ts";
 import {data} from "./last.fm.ts";
 
-const musicData:LastFMInterface = data;
+const musicData: LastFMInterface = data.recenttracks.track[0];
 
 //dont forget the notlistening case...
-export function getAlbum():string{
+export function getAlbum(): string {
     const albumName: string = musicData.album?.["#text"] ?? "null";
     return albumName;
 }
 
-export function getArtist():string{
-    const artistName:string = musicData.artist?.["#text"] ?? "null";
+export function getArtist(): string {
+    const artistName: string = musicData.artist?.["#text"] ?? "null";
     return artistName;
 }
-export function getNowPlaying():boolean{
+
+export function getNowPlaying(): boolean {
     const isPlaying = musicData["@attr"]?.nowplaying === "true"
     return isPlaying.valueOf();
 }
-export function getImage():string{
-    const imageURL:string = musicData.image[3]?.["#text"] ?? "https://via.placeholder.com/300"
+
+export function getImage(): string {
+    const imageURL: string = musicData.image[3]?.["#text"] ?? "https://via.placeholder.com/300"
     return imageURL;
 }
-export function getSongName():string{
+
+export function getSongName(): string {
     return musicData?.name ?? "null"
 }

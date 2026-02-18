@@ -4,10 +4,10 @@ export interface LastFMInterface {
     },
     image: {
         //"size":string,
-        "#text":string,
+        "#text": string,
     }[],
-    album:{
-        "#text":string
+    album: {
+        "#text": string
     },
     name: string,
     //question mark makes the data optional (e.g. not listening to something on spotify right now)
@@ -16,8 +16,8 @@ export interface LastFMInterface {
     }
 }
 
-export interface LastFMTracks{
-    recenttrack:{
+export interface LastFMTracks {
+    recenttracks: {
         track: LastFMInterface[];
     };
 }
